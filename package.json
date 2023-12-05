@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "axios": "^1.6.2",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.69.5",
+    "scss": "^0.2.4",
     "vite": "^5.0.0"
   }
 }

@@ -1,0 +1,125 @@
+@import 'normalize.css';
+@import './variables.scss';
+
+html,
+body {
+    height: 100%;
+    color: $colorPrimary;
+    overflow-y: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+.wrapper {
+    width: 98%;
+    height: 97vh;
+    min-height: 500px;
+    background: $black;
+    padding: 1.5vh 1%;
+
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 90% auto;
+    grid-template-areas:
+        's m m m  m m m m  m m m m'
+        'p p p p  p p p p  p p p p';
+}
+
+// Sidebar
+.sidebar {
+    grid-area: s;
+    background-color: $black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+    min-width: 220px;
+
+    &__top {
+        min-height: 110px;
+        background-color: $grey;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        justify-content: space-around;
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: $colorSecondary;
+            font-weight: 900;
+        }
+
+        .active {
+            color: $colorPrimary;
+        }
+    }
+
+    &__library {
+        width: 100%;
+        height: 100%;
+        background-color: $grey;
+        border-radius: 10px;
+
+        .collapse {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+
+            &__sidebar {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                color: $colorSecondary;
+                transition: .5s ease;
+
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+
+            &__features-btn {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                img {
+                    cursor: pointer;
+                    transition: .5s ease;
+                    padding: 5px;
+
+                    &:hover {
+                        background-color: #ffffff17;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Main
+.main {
+    grid-area: m;
+    background-color: $grey;
+
+    border-radius: 10px;
+}
+
+// Player
+.player {
+    grid-area: p;
+    background-color: $black;
+}

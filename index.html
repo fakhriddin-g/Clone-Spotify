@@ -1,13 +1,53 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+   <meta charset="UTF-8" />
+   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Vite App</title>
+</head>
+
+<body>
+
+   <div class="wrapper">
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+
+         <!-- Top Sidebar -->
+         <div class="sidebar__top">
+            <div class="sidebar__top-link active">
+               <img src="./public/icons/home.svg" alt="">
+               <a href="/">Home</a>
+            </div>
+            <div class="sidebar__top-link">
+               <img src="./public/icons/search.svg" alt="">
+               <a href=".">Search</a>
+            </div>
+         </div>
+
+         <!-- Library -->
+         <div class="sidebar__library">
+            <div class="collapse">
+               <div class="collapse__sidebar">
+                  <img src="./public/icons/library.svg" alt="">
+                  <span>Your Library</span>
+               </div>
+               <div class="collapse__features-btn">
+                  <img src="./public/icons/library-add.svg" alt="">
+                  <img src="./public/icons/show-more-less.svg" alt="">
+               </div>
+            </div>
+            <div class="sidebar__library-scrollable"></div>
+         </div>
+      </div>
+
+      <div class="main"></div>
+      <div class="player"></div>
+   </div>
+
+   <script type="module" src="./src/js/main.js"></script>
+</body>
+
 </html>
